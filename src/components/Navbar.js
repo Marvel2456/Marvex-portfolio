@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import {AiOutlineClose, AiOutlineMenu, AiOutlineGithub, AiOutlineLinkedin} from 'react-icons/ai'
+import { HiOutlineMail} from 'react-icons/hi'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
+import Logo from '../assets/EI.png'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -9,27 +12,63 @@ const Navbar = () => {
   }
 
   return (
-    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
-      <h1 className='w-full text-3xl font-bold text-[#453299]'>MARVEX</h1>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-black text-white'>
+      <div>
+        <img src={Logo} alt='Logo image' style={{width: '80px'}} />
+      </div>
+
+      {/* menu */}
+
       <ul className='hidden md:flex'>
         <li className='p-4'>Home</li>
         <li className='p-4'>About</li>
         <li className='p-4'>Projects</li>
         <li className='p-4'>Contact</li>
       </ul>
-      <div onClick={handleNav} className='block md:hidden'>
-        {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+    
+      
+      {/* Hamburger */}
+
+      <div onClick={handleNav} className='md:hidden z-10'>
+        {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} /> }
         
       </div>
-      <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed left-[-100%]'}>
-      <h1 className='w-full text-3xl font-bold text-[#453299] m-7'>MARVEX</h1>
+      
+      {/* mobile menu */}
 
-        <ul className='uppercase p-4'>
-          <li className='p-4 border-b border-gray-700'>Home</li>
-          <li className='p-4 border-b border-gray-700'>About</li>
-          <li className='p-4 border-b border-gray-700'>Projects</li>
-          <li className='p-4 border-b border-gray-700'>Contact</li>
+      <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center'}>
+        <li className='py-6 text-4xl'>Home</li>
+        <li className='py-6 text-4xl'>About</li>
+        <li className='py-6 text-4xl'>Projects</li>
+        <li className='py-6 text-4xl'>Contact</li>
+      </ul>
+
+      {/* social icons */}
+
+      <div className='flex fixed flex-col top-[35%] left-0'>
+        <ul>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-blue-600 px-4'>
+            <a className='flex justify-between items-center w-full' href='/'>
+              Linkedin<AiOutlineLinkedin size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-[#333333] px-4'>
+            <a className='flex justify-between items-center w-full' href='/'>
+              Github<AiOutlineGithub size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-[#6fce20] px-4'>
+            <a className='flex justify-between items-center w-full' href='/'>
+              Email<HiOutlineMail size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-[#555754] px-4'>
+            <a className='flex justify-between items-center w-full' href='/'>
+              Resume<BsFillPersonLinesFill size={30} />
+            </a>
+          </li>
         </ul>
+
       </div>
 
     </div>

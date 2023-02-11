@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Home from "./components/Home"
 import About from "./components/About";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 
@@ -10,11 +10,11 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <Hero />
+      <Home />
       <About />
       <Experience />
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }
