@@ -1,6 +1,6 @@
 import React from 'react'
-import Quicksales from '../assets/qu1.png'
-import Auction from '../assets/oac.png'
+import Quicksales from '../assets/quick.png'
+import Auction from '../assets/Oau.png'
 
 const Projects = () => {
   return (

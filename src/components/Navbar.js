@@ -53,7 +53,7 @@ const Navbar = () => {
 
       <div onClick={handleNav} className='md:hidden z-10'>
         {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} /> }
-        
+
       </div>
       
       {/* mobile menu */}
@@ -96,7 +96,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-[#333333] px-4'>
-            <a className='flex justify-between items-center w-full' href='/'>
+            <a className='flex justify-between items-center w-full' href='https://github.com/Marvel2456'>
               Github<AiOutlineGithub size={30} />
             </a>
           </li>

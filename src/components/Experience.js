@@ -1,15 +1,15 @@
 import React from 'react'
-import Html from '../assets/Html-icon.webp'
-import Css from '../assets/css-icon.png'
-import Javascript from '../assets/JavaScript-Logo.png'
-import ReactImg from '../assets/React-icon.svg.png'
+import Html from '../assets/html.png'
+import Css from '../assets/css.png'
+import Javascript from '../assets/javascript.png'
+import ReactImg from '../assets/react.png'
 import Mysql from '../assets/mysql.png'
 import Postgres from '../assets/postgresql.webp'
 import Bootstrap from '../assets/bootstrap.png'
-import TailwindImg from '../assets/tailwind.jpg'
+import TailwindImg from '../assets/tailwind.png'
 import Django from '../assets/django-logo.png'
 import Drf from '../assets/drf-logo2.png'
-// import Github from '../assets/GitHub.png'
+import Github from '../assets/github.png'
 
 const Experience = () => {
   return (
@@ -53,6 +53,10 @@ const Experience = () => {
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto rounded-full' src={Drf} alt='Html icon' />
             <p className='my-2'>DRF</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+            <img className='w-20 mx-auto rounded-full' src={Github} alt='Html icon' />
+            <p className='my-2'>GITHUB</p>
           </div>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <img className='w-20 mx-auto rounded-full' src={Postgres} alt='Html icon' />
