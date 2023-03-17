@@ -17,15 +17,14 @@ const Home = () => {
          these new ideas to life. I love good music!!!
         </p>
         <div>
-          <button className='border-2 group px-6 py-3 my-2 flex items-center hover:bg-blue-600 hover:border-blue-600'>
-            <Link to="projects" smooth={true} duration={500}>
-              View Projects
-            </Link>
-            <span className='group-hover:rotate-90'>
-             <HiArrowNarrowRight className='ml-3' />
-            </span>
-           
-          </button>
+          <Link to="projects" smooth={true} duration={500}>
+            <button className='border-2 group px-6 py-3 my-2 flex items-center hover:bg-blue-600 hover:border-blue-600'>
+              View Projects 
+              <span className='group-hover:rotate-90'>
+              <HiArrowNarrowRight className='ml-3' />
+              </span>
+            </button>
+          </Link>
         </div>
 
       </div>
